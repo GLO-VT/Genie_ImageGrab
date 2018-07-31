@@ -1,0 +1,199 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{19B46147-232F-4793-BFB6-595A0AC2BA1E}</ProjectGuid>
+			<ProjectType>CppConsoleApplication</ProjectType>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Platform>Win32</Platform>
+			<AppType>Console</AppType>
+			<FrameworkType>None</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<IncludePath>..\..\Common\;..\;$(IncludePath)</IncludePath>
+			<BRCC_Defines>NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES;$(BRCC_Defines)</BRCC_Defines>
+			<PackageImports>vcl.bpi;rtl.bpi;vclx.bpi;bcbsmp.bpi;dbrtl.bpi;adortl.bpi;vcldb.bpi;bdertl.bpi;vcldbx.bpi;dsnap.bpi;dsnap.bpi;dsnapcon.bpi;teeui.bpi;teedb.bpi;tee.bpi;ibxpress.bpi;vclie.bpi;xmlrtl.bpi;inet.bpi;inetdbbde.bpi;inetdbxpress.bpi;inetdb.bpi;bcbie.bpi;soaprtl.bpi;dbexpress.bpi;dbxcds.bpi;indycore.bpi;indysystem.bpi;bcboffice2k.bpi</PackageImports>
+			<BCC_PCHCache>true</BCC_PCHCache>
+			<DCC_UnitSearchPath>..\;..\..\Common;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ResourcePath>..\;..\..\Common;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<TASM_Defines>NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES;$(TASM_Defines)</TASM_Defines>
+			<BCC_IncludePath>..\;..;$(BDS)\include;$(BDS)\include\vcl;..\..\Common;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib;$(BDS)\include\dinkumware;$(BCC_IncludePath)</BCC_IncludePath>
+			<BRCC_IncludePath>..;$(BDS)\include;$(BDS)\include\vcl;..\..\Common;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib;$(BDS)\include\dinkumware;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<UsePackages>true</UsePackages>
+			<TASM_IncludePath>..;$(BDS)\include;$(BDS)\include\vcl;..\..\Common;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib;$(BDS)\include\dinkumware;$(TASM_IncludePath)</TASM_IncludePath>
+			<DCC_IncludePath>..\;..\..\Common;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+			<FinalOutputDir>.</FinalOutputDir>
+			<OutputExt>exe</OutputExt>
+			<DynamicRTL>true</DynamicRTL>
+			<TASM_Debugging>None</TASM_Debugging>
+			<TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+			<ILINK_ObjectSearchPath>..\;..\..\Common;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+			<BCC_Defines>NO_STRICT;$(BCC_Defines)</BCC_Defines>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<NoVCL>true</NoVCL>
+			<ILINK_LibraryPath>..\..\Common\;..\..\..\..\Lib\Win32\Borland\;..\;..\..\Common;..;$(BDS)\Projects\Lib;$(BDS)\lib\obj;$(BDS)\lib;..\..\..\..\lib\Win32\Borland;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_ObjPath>..\;..\..\Common;$(DCC_ObjPath)</DCC_ObjPath>
+			<BCC_UserSuppliedOptions> -tWM -tWC -Vx -Ve</BCC_UserSuppliedOptions>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<BCC_UserSuppliedOptions> -tWM -tWC -Vx -Ve -k</BCC_UserSuppliedOptions>
+			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<DCC_AdditionalSwitches> -V</DCC_AdditionalSwitches>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+			<BCC_UserSuppliedOptions> -tWM -tWC -Vx -Ve -r</BCC_UserSuppliedOptions>
+			<DCC_AdditionalSwitches> -$O+</DCC_AdditionalSwitches>
+			<ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+		</PropertyGroup>
+		<ItemGroup>
+			<CppCompile Include="..\..\Common\ExampleUtils.cpp">
+				<BuildOrder>3</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<ResFiles Include="GrabCPP_b.res">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
+			<CppCompile Include="..\GrabCPP.cpp">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<LibFiles Include="..\..\..\..\Lib\Win32\Borland\SapClassBasic.lib">
+				<BuildOrder>4</BuildOrder>
+				<IgnorePath>true</IgnorePath>
+				<BuildOrder>1</BuildOrder>
+			</LibFiles>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppConsoleApplication</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">8</VersionInfo>
+						<VersionInfo Name="MinorVer">3</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">4105</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Teledyne DALSA</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">Grab Example for Borland C++ Builder</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">8.3.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">GrabCPP_b</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">Copyright (c) Teledyne DALSA Inc. 2005-2017</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename">GrabCPP_b.exe</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">Sapera LT</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">8.30</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Count">10</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item0">..\;..;$(BCB)\include;$(BCB)\include\vcl;..\..\Common;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item1">..;$(BCB)\include;$(BCB)\include\vcl;..\..\Common;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item2">..;$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic;..\..\..\..\externals\CorLib</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item3">..\;..;$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item4">..\;$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item5">$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item6">..\;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item7">D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\include;$(BCB)\include\vcl;..\..\..\..\include;..\..\..\..\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item8">D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\include;$(BCB)\include\vcl;$(saperadir)\include;$(saperadir)\classes\basic</HistoryLists_hlIncludePath>
+						<HistoryLists_hlIncludePath Name="Item9">D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\include;$(BCB)\include\vcl</HistoryLists_hlIncludePath>
+					</HistoryLists_hlIncludePath>
+					<HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Count">10</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item0">..\..\Common;..\;..;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item1">..;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item2">..\;..;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item3">..\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item4">$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item5">..\;$(BCB)\Projects\Lib;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item6">$(BCB)\Projects\Lib;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib\bc</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item7">$(BCB)\Projects\Lib;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\..\lib</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item8">$(BCB)\Projects\Lib;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\lib\obj;$(BCB)\lib;$(saperadir)\lib</HistoryLists_hlLibraryPath>
+						<HistoryLists_hlLibraryPath Name="Item9">$(BCB)\Projects\Lib;D:\dev\sapera\Examples\Classes\Vc\GrabConsole;$(BCB)\lib\obj;$(BCB)\lib</HistoryLists_hlLibraryPath>
+					</HistoryLists_hlLibraryPath>
+					<HistoryLists_hlDebugSourcePath>
+						<HistoryLists_hlDebugSourcePath Name="Count">1</HistoryLists_hlDebugSourcePath>
+						<HistoryLists_hlDebugSourcePath Name="Item0">$(BCB)\source\vcl</HistoryLists_hlDebugSourcePath>
+					</HistoryLists_hlDebugSourcePath>
+					<HistoryLists_hlConditionals>
+						<HistoryLists_hlConditionals Name="Count">1</HistoryLists_hlConditionals>
+						<HistoryLists_hlConditionals Name="Item0">_DEBUG</HistoryLists_hlConditionals>
+					</HistoryLists_hlConditionals>
+					<Debugging>
+						<Debugging Name="DebugSourceDirs">$(BCB)\source\vcl</Debugging>
+					</Debugging>
+					<Parameters>
+						<Parameters Name="RemoteHost"/>
+						<Parameters Name="RemotePath"/>
+						<Parameters Name="RemoteParams"/>
+						<Parameters Name="RemoteLauncher"/>
+						<Parameters Name="UseRemoteLauncher">False</Parameters>
+						<Parameters Name="RemoteCWD"/>
+						<Parameters Name="RemoteDebug">False</Parameters>
+					</Parameters>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+				</CPlusPlusBuilder.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

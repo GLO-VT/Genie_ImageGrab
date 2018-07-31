@@ -1,0 +1,4 @@
+﻿  GrabCPP.cpp
+..\GrabCPP.cpp(340): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  GrabCPP_2015.vcxproj -> C:\Program Files\Teledyne DALSA\Sapera\Examples\Classes\GrabConsole\Vc\Debug64\GrabCPP.exe
+  GrabCPP_2015.vcxproj -> .\Debug64\GrabCPP.pdb (Full PDB)
