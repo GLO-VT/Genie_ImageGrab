@@ -1,4 +1,4 @@
-// -----------------------------------------------------------------------------------------
+Gra// -----------------------------------------------------------------------------------------
 // Sapera++ console grab example
 // 
 //    This program shows how to grab images from a camera into a buffer in the host
